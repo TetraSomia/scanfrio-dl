@@ -6,7 +6,7 @@ Download manga serie or volume from scan-fr.io
 Synopsis
 --------
 
-`python3 scanfrio_dl URL`
+`python3 scanfrio-dl URL`
 
 
 Example
