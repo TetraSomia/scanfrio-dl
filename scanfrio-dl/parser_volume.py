@@ -8,7 +8,7 @@ class ParserVolume:
         
         r = requests.get(url)
         if r.status_code != 200:
-            raise Exception('ParserVolume: http request failed')
+            raise RuntimeError('ParserVolume: http request failed')
         self.soup = BeautifulSoup(r.text, 'html.parser')
         img_tags = self.soup.findAll('img', {'class': 'img-responsive'})
         for img_tag in img_tags:

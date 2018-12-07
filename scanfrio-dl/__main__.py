@@ -15,7 +15,7 @@ Coded by:
 Arthur Josso
     https://github.com/tetrasomia
 
-    Feel free to do whatever you want with this tool.
+    Feel free to do whatever you want with this tool, there is no licence :3
 """
 
 import os

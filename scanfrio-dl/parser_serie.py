@@ -8,7 +8,7 @@ class ParserSerie:
         
         r = requests.get(url)
         if r.status_code != 200:
-            raise Exception('ParserSerie: http request failed')
+            raise RuntimeError('ParserSerie: http request failed')
         self.soup = BeautifulSoup(r.text, 'html.parser')
         volume_tags = self.soup.findAll('h5', {'class': 'chapter-title-rtl'})
         for volume_tag in volume_tags:
