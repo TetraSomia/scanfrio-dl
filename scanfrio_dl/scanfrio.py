@@ -1,9 +1,11 @@
 import os
 
+from downloader import Downloader
+
 class Scanfrio:
-    def __init__(self, basedir, url):
+    def __init__(self, basedir):
         self.basedir = basedir
-        self.url = url
+        self.downloaders = []
         self._basedir_init()
 
     def _basedir_init(self):
@@ -12,3 +14,11 @@ class Scanfrio:
                 raise RuntimeError('Base directory is not actually a directory')
         else:
             os.makedirs(self.basedir)
+
+    def add_url(self, url):
+        self.downloaders.append(Downloader(url))
+
+    def run(self):
+        for downloader in self.downloaders:
+            downloader.download()
+

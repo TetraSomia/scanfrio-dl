@@ -29,7 +29,9 @@ def main():
 
     basedir = arguments['--base-dir'] or os.getcwd()
     url = arguments['URL']
-    scanfrio = Scanfrio(basedir, url)
+    scanfrio = Scanfrio(basedir)
+    scanfrio.add_url(url)
+    scanfrio.run()
 
 if __name__ == '__main__':
     main()
