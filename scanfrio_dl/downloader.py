@@ -3,6 +3,7 @@ import urllib.parse
 import requests
 
 from parser_volume import ParserVolume
+from parser_serie import ParserSerie
 
 class Downloader:
     def __init__(self, basedir, url):
@@ -51,7 +52,9 @@ class Downloader:
         if self.volume_only:
             self._dl_volume(self.url)
             return
-        raise RuntimeError('serie dl not implemented')
+        parser = ParserSerie(self.url)
+        for volume_url in parser.get_volume_urls():
+            self._dl_volume(volume_url)
 
     def download(self):
         self._dl_serie()

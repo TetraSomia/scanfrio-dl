@@ -27,7 +27,8 @@ from scanfrio import Scanfrio
 def main():
     arguments = docopt(__doc__, version='scanfrio-dl 1.0')
 
-    basedir = os.path.expanduser(arguments['--base-dir']) or os.getcwd()
+    basedir = arguments['--base-dir'] or os.getcwd()
+    basedir = os.path.expanduser(basedir)
     url = arguments['URL']
     scanfrio = Scanfrio(basedir)
     scanfrio.add_url(url)
