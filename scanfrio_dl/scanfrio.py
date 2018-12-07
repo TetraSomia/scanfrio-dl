@@ -16,7 +16,7 @@ class Scanfrio:
             os.makedirs(self.basedir)
 
     def add_url(self, url):
-        self.downloaders.append(Downloader(url))
+        self.downloaders.append(Downloader(self.basedir, url))
 
     def run(self):
         for downloader in self.downloaders:
