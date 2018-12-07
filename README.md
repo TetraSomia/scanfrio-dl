@@ -1,7 +1,7 @@
 scanfrio-dl
 ===========
 
-Download mangas series or volume from scan-fr.io
+Download manga serie or volume from scan-fr.io
 
 Synopsis
 --------
