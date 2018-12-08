@@ -34,7 +34,18 @@ Dependencies
 
 requests, BeautifulSoup and docopt
 
+Feature Request
+---------------
+
+If anyone find this tool useful, I might implement features such as:
+- Pip package
+- Multithreaded download for series
+- Better output concerning download progress
+- Concatenation of scans into a single PDF
+
+So feel free to ask me for any possible improvement.
+
 Copyright
 ---------
 
-scanfrio-dl is released into the public domain by the copyright holders
+scanfrio-dl is released into the public domain by the copyright holders.
