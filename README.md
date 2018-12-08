@@ -10,7 +10,7 @@ Synopsis
 
 
 Example
---------
+-------
 
 URL can be https://www.scan-fr.io/manga/one-punch-man to download the whole serie or https://www.scan-fr.io/manga/one-punch-man/1 to only download the first volume (in the case of OPM, the first chapter).
 
@@ -29,6 +29,10 @@ Details
     --base-dir=<dir>        Base location of which all files are downloaded.
 
 ```
+Dependencies
+------------
+
+requests, BeautifulSoup and docopt
 
 Copyright
 ---------
